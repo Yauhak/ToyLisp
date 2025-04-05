@@ -1,0 +1,52 @@
+(# 这个是重量级)
+(# 依次输入x0 y0 x1 y1 x2 y2)
+(fn fcal (lst idx)
+   (def i 0)(def avx 0)
+   (while (<= i idx)(
+      (def avx (+ avx (m lst i 0)))
+      (def i (+ i 1)))
+   )
+   (def i 0)(def avy 0)
+   (while (<= i idx)(
+      (def avy (+ avy (m lst i 1)))
+      (def i (+ i 1)))
+   )
+   (def avx (/ avx (+ idx 1)))
+   (def avy (/ avy (+ idx 1)))
+   (def j 0)(def sum_c 0)
+   (while (<= j idx)(
+      (def sum_c (+ sum_c 
+      (*(- (m lst j 0) avx)
+      (- (m lst j 1) avy))))
+      (def j (+ j 1)))
+   )
+   (def j 0)(def sum_f 0)
+   (while (<= j idx)(
+      (def sum_f (+ sum_f 
+      (*(- (m lst j 0) avx)
+      (- (m lst j 0) avx))))
+      (def j (+ j 1)))
+   )
+   (def _k_ (/ sum_c sum_f))
+   (def _b_ (- avy (* _k_ avx)))
+   (if (>= _b_ 0)
+      (out "Function: y=" _k_ "x+" _b_)
+      (out "Function: y=" _k_ "x" _b_)
+   )
+)
+(main
+   (def vector (list "X" "Y"))
+   (def lst (list (alloc 1)(alloc 1)(alloc 1)))
+   (def x 0)
+   (while (<= x 2)(
+      (def y 0)
+         (while (<= y 1)(
+            (array lst (x y) (in (& (m vector y) "(" x "):")))
+            (def y (+ y 1))
+            )
+         )
+       (def x (+ x 1))
+       )
+   )
+   (fcal lst 2)
+)

@@ -1,0 +1,12 @@
+(public
+   crlf (chr 13)
+)
+(fn fibonacci (l a b c)
+    (def lst l)
+    (def lst (& lst a " " b crlf))
+    (if (= c 1)
+        (return lst)
+        (return (fibonacci lst (+ a b) (+ a b b)(- c 1)))
+    )
+)
+(main (out "Fibonacci:(1-60)" crlf (fibonacci "" 1 1 30)))

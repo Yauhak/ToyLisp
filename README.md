@@ -19,16 +19,18 @@
 - Windows系统 + VB环境
 
 ### 基础示例
-- (main (out "Hello ToyLisp!"))
-
-- (# 阶乘)
-- (fn factorial (n)
--    (if (<= n 1)
--      (return  1)
--      (return (* n (factorial (- n 1))))
-- )
-- (main (out (factorial 5)))(# 输出120)
-
+```lisp
+(main (out "Hello ToyLisp!"))
+```
+```lisp
+(# 阶乘)
+(fn factorial (n)
+(if (<= n 1)
+     (return  1)
+     (return (* n (factorial (- n 1))))
+)
+(main (out (factorial 5)))(# 输出120)
+```
 ### 📚 语法
 - 变量定义
 ```lisp
@@ -36,16 +38,18 @@
 (public
     MAX_SIZE 100  (# 全局变量)
 )
+```
 
 - 神经网络示例-三层神经网络（见BP神经网络-三层.lsp）
-- (main
--    (def syn0 (list (rand 1) (rand 1)...) (# 初始化权重)
--    (while (< iter 1000)  (# 迭代训练)
--       (def l1 (active (matrix_mul m1 syn0) 1)
--       ... (# 反向传播逻辑)
--    )
-- )
-
+```lisp
+(main
+   (def syn0 (list (rand 1) (rand 1)...) (# 初始化权重)
+   (while (< iter 1000)  (# 迭代训练)
+      (def l1 (active (matrix_mul m1 syn0) 1)
+      ... (# 反向传播逻辑)
+   )
+)
+```
 ### 🎯 示例程序
 #### 示例名称	            功能描述
 - 斐波那契数列.lsp	    生成斐波那契序列

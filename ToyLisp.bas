@@ -1,33 +1,29 @@
 Attribute VB_Name = "Module1"
-'ÒµÓàĞ´µÄÒ»¸öÀàËÆlispÓï·¨µÄ½Å±¾ÓïÑÔµÄ½âÊÍÆ÷
-'ÒµÓàĞ´µÄÒ»¸öÀàËÆLispÓï·¨µÄ½Å±¾ÓïÑÔµÄ½âÊÍÆ÷
-'Ãû³Æ£ºToyLisp£¨Õæ¾ÍÊÇ¸öÍæ¾ß£© ÎÄ¼şºó×º£º.LSP£¨ÎÒ²»ÊÇLSP£©
-'²»¹ı¸ÃÓĞµÄ¶«Î÷£¬±ÈÈçÊäÈëÊä³ö¡¢Ìõ¼şÑ­»·¡¢ÊıÑ§ÔËËã¡¢Êı×é²Ù×÷¡¢×Ö·û´®²Ù×÷¡¢ÎÄ¼ş¶ÁĞ´¡¢¹«ÓĞ±äÁ¿¡¢º¯Êı³ÌĞò¡¢´íÎóÌáÊ¾µÈ¶¼ÓĞ£¨^V^£©
-'Óï·¨ºÜ¼òµ¥£¬¾ÍÊÇ([º¯ÊıÃû/²Ù×÷·û] [²ÎÊıÁĞ±í])
-'Èç(out 1 2 3 (+ 4 5))
-'Ã¿Ò»¸ö³ÌĞò¶¼Ö»ÓĞÒ»¸öÈë¿Úmain¡£±ÈÈç(main (out "Hello World!"))
-'Èç¹ûº¯ÊıÖØ¸´¶¨ÒåÔòÒÔ×îÏÈ¶¨ÒåµÄº¯ÊıÎª±ê×¼
-'ÔÚĞ´ºÃÄã×Ô¼ºµÄToyLisp³ÌĞòºó£¬¿ÉÒÔÔÚÑ¡Ôñ´ò¿ª·½Ê½ÄÇÑ¡ÔñToyLisp.exeÔËĞĞ
-'¾ßÌåÓï·¨Àı×ÓÇë¿´×¢ÊÍ
-'ÈçÓĞÊè£¨ba£©Â©£¨ge£©Çë¶à¶à°üº­
-'Ò²¸ĞĞ»ÄãµÄÔÄ¶Á£¨»°ËµÕæÓĞÈËÔ¸Òâ¿´ÍêÕâÒ»´óÛç´úÂëÂğ£¨±¯£©£©
-'£¨Èç¹ûÓĞÈË¿´µ½µÄ»°£¬ÍæÍæÒ²ºÃßÂ£¬ÎÒ¾Í×î»áĞ´½âÊÍÆ÷ÁË£©
-'ÎÒÆäËûµÄ×÷Æ·ÔÚTGÎÄ¼ş¼ĞÀïÒ»¸öÄãÒ»¿´¾ÍÖªµÀÊÇÄÄÒ»¸öµÄÎÄ¼ş¼Ğ
-'ÕæµÄ£¬È«ÊÇ½âÊÍÆ÷(ToyLispÕâÍæÒâ¾ÍÊÇÀï±ßGrapLispÈ¥µô»æÍ¼¹¦ÄÜ¼°ĞŞ¸´ÁËÒ»Ğ©½âÎöBugµÄ°æ±¾)
-'²»¹ı´ó¶¼Ã»ÓĞToyLispÄÇÃ´¹¦ÄÜÈ«Ãæ¡¢ÔËĞĞÎÈ¶¨
-'Èç¹ûÄã¸ĞĞËÈ¤£¬¿ÉÒÔÈ¥¿´Ò»ÏÂ
-'(¡£-¦Ø-)zzz
+'ä¸šä½™å†™çš„ä¸€ä¸ªç±»ä¼¼lispè¯­æ³•çš„è„šæœ¬è¯­è¨€çš„è§£é‡Šå™¨
+'ä¸šä½™å†™çš„ä¸€ä¸ªç±»ä¼¼Lispè¯­æ³•çš„è„šæœ¬è¯­è¨€çš„è§£é‡Šå™¨
+'åç§°ï¼šToyLispï¼ˆçœŸå°±æ˜¯ä¸ªç©å…·ï¼‰ æ–‡ä»¶åç¼€ï¼š.LSPï¼ˆæˆ‘ä¸æ˜¯LSPï¼‰
+'ä¸è¿‡è¯¥æœ‰çš„ä¸œè¥¿ï¼Œæ¯”å¦‚è¾“å…¥è¾“å‡ºã€æ¡ä»¶å¾ªç¯ã€æ•°å­¦è¿ç®—ã€æ•°ç»„æ“ä½œã€å­—ç¬¦ä¸²æ“ä½œã€æ–‡ä»¶è¯»å†™ã€å…¬æœ‰å˜é‡ã€å‡½æ•°ç¨‹åºã€é”™è¯¯æç¤ºç­‰éƒ½æœ‰ï¼ˆ^V^ï¼‰
+'è¯­æ³•å¾ˆç®€å•ï¼Œå°±æ˜¯([å‡½æ•°å/æ“ä½œç¬¦] [å‚æ•°åˆ—è¡¨])
+'å¦‚(out 1 2 3 (+ 4 5))
+'æ¯ä¸€ä¸ªç¨‹åºéƒ½åªæœ‰ä¸€ä¸ªå…¥å£mainã€‚æ¯”å¦‚(main (out "Hello World!"))
+'å¦‚æœå‡½æ•°é‡å¤å®šä¹‰åˆ™ä»¥æœ€å…ˆå®šä¹‰çš„å‡½æ•°ä¸ºæ ‡å‡†
+'åœ¨å†™å¥½ä½ è‡ªå·±çš„ToyLispç¨‹åºåï¼Œå¯ä»¥åœ¨é€‰æ‹©æ‰“å¼€æ–¹å¼é‚£é€‰æ‹©ToyLisp.exeè¿è¡Œ
+'å…·ä½“è¯­æ³•ä¾‹å­è¯·çœ‹æ³¨é‡Š
+'å¦‚æœ‰ç–ï¼ˆbaï¼‰æ¼ï¼ˆgeï¼‰è¯·å¤šå¤šåŒ…æ¶µ
+'ä¹Ÿæ„Ÿè°¢ä½ çš„é˜…è¯»ï¼ˆè¯è¯´çœŸæœ‰äººæ„¿æ„çœ‹å®Œè¿™ä¸€å¤§å¨ä»£ç å—ï¼ˆæ‚²ï¼‰ï¼‰
+'ï¼ˆå¦‚æœæœ‰äººçœ‹åˆ°çš„è¯ï¼Œç©ç©ä¹Ÿå¥½å‘—ï¼Œæˆ‘å°±æœ€ä¼šå†™è§£é‡Šå™¨äº†ï¼‰
+'(ã€‚-Ï‰-)zzz
 'Yauhak Chen - QQ3953814837
 Dim vars()
-'±äÁ¿
+'å˜é‡
 Dim funcs()
-'¶¨Òåº¯Êı
+'å®šä¹‰å‡½æ•°
 Dim sourcecode
-'¶ÁÈ¡µÄÔ´´úÂë
+'è¯»å–çš„æºä»£ç 
 Dim codelen, src, idx, curlv, ifabort, rt, ewhile
-'Ô´´úÂë³¤¶È£¬Ô´´úÂë£¬µ±Ç°½âÎöÎ»ÖÃ£¬µ±Ç°×÷ÓÃÓòµÈ¼¶£¬ÊÇ·ñÍË³öº¯Êı¡¢Ñ­»·£¬º¯Êı·µ»ØÖµ£¬ÊÇ·ñ½áÊøÑ­»·
-Dim block, crlf 'Æ¥ÅäÀ¨ºÅ£¬µ±Ç°½âÎöĞĞÊı
-'ĞŞ¸ÄÊı×é±äÁ¿
+'æºä»£ç é•¿åº¦ï¼Œæºä»£ç ï¼Œå½“å‰è§£æä½ç½®ï¼Œå½“å‰ä½œç”¨åŸŸç­‰çº§ï¼Œæ˜¯å¦é€€å‡ºå‡½æ•°ã€å¾ªç¯ï¼Œå‡½æ•°è¿”å›å€¼ï¼Œæ˜¯å¦ç»“æŸå¾ªç¯
+Dim block, crlf 'åŒ¹é…æ‹¬å·ï¼Œå½“å‰è§£æè¡Œæ•°
+'ä¿®æ”¹æ•°ç»„å˜é‡
 Sub opar(tag, mat, ide, val)
     If ide = UBound(mat) Then
         tag(rec(mat(ide))) = val
@@ -35,16 +31,16 @@ Sub opar(tag, mat, ide, val)
         opar tag(rec(mat(ide))), mat, ide + 1, val
     End If
 End Sub
-'´íÎóĞÅÏ¢Êä³ö
-'Õâ¸ö¹¦ÄÜ²»ÍêÉÆ
+'é”™è¯¯ä¿¡æ¯è¾“å‡º
+'è¿™ä¸ªåŠŸèƒ½ä¸å®Œå–„
 Sub cerr(exp)
     MsgBox exp, vbCritical, "ToyLisp"
     End
 End Sub
 Function rec(ary)
-'Ö´ĞĞ±»½âÎö³ÉÁĞ±íµÄ´úÂë
+'æ‰§è¡Œè¢«è§£ææˆåˆ—è¡¨çš„ä»£ç 
 On Error Resume Next
-'²»ÏëĞ´²ÎÊıÅĞ¶ÏÁË£¬Ì«ÀÛÁË
+'ä¸æƒ³å†™å‚æ•°åˆ¤æ–­äº†ï¼Œå¤ªç´¯äº†
 tmp = crlf
 If IsArray(ary) Then
 If UBound(ary) = -1 Then Exit Function
@@ -54,7 +50,7 @@ If Not IsArray(ary(0)) Then
     If Not operate_name = "def" And Not operate_name = "do" And Not operate_name = "return" And Not operate_name = "m" _
     And Not operate_name = "array" And Not operate_name = "out" And Not operate_name = "in" And Not operate_name = "#" _
     And Not operate_name = "size" And Not operate_name = "m" Then fst_n = rec(ary(1))
-    'fst_n Õâ¸ö±äÁ¿£¬ÎÒµÄ³õÖÔÊÇ¼ÇÂ¼ÊıÑ§ÔËËãÓï¾äµÄµÚÒ»¸öÖµ£¬·½±ã+-*/ÕâÑùµÄÁ¬ĞøĞÍÊıÑ§ÔËËã£¬²»È»Òª¶¨ÒåºÃ¶à±é
+    'fst_n è¿™ä¸ªå˜é‡ï¼Œæˆ‘çš„åˆè¡·æ˜¯è®°å½•æ•°å­¦è¿ç®—è¯­å¥çš„ç¬¬ä¸€ä¸ªå€¼ï¼Œæ–¹ä¾¿+-*/è¿™æ ·çš„è¿ç»­å‹æ•°å­¦è¿ç®—ï¼Œä¸ç„¶è¦å®šä¹‰å¥½å¤šé
     Select Case operate_name
     Case "+":
         For i = 2 To UBound(ary)
@@ -66,7 +62,7 @@ If Not IsArray(ary(0)) Then
             fst_n = fst_n & rec(ary(i))
         Next
     '(& "114" "514")
-    'Õâ¸öÊÇ×Ö·û´®Á¬½Ó
+    'è¿™ä¸ªæ˜¯å­—ç¬¦ä¸²è¿æ¥
     Case "-":
         For i = 2 To UBound(ary)
             fst_n = fst_n - rec(ary(i))
@@ -95,8 +91,8 @@ If Not IsArray(ary(0)) Then
         fst_n = fst_n Mod rec(ary(2))
     Case "^":
         fst_n = fst_n ^ rec(ary(2))
-    'È¡ÓàÓë³Ë·½
-    Case "sqrt": '¿ª·½
+    'å–ä½™ä¸ä¹˜æ–¹
+    Case "sqrt": 'å¼€æ–¹
         fst_n = Sqr(fst_n)
     Case "sin":
         fst_n = Sin(fst_n)
@@ -106,16 +102,16 @@ If Not IsArray(ary(0)) Then
         fst_n = Tan(fst_n)
     Case "atan":
         fst_n = Atn(fst_n)
-    'Èı½Çº¯Êı
+    'ä¸‰è§’å‡½æ•°
     Case "abs":
         fst_n = Abs(fst_n)
     Case "int":
         fst_n = Int(fst_n)
     Case "fix":
         fst_n = Fix(fst_n)
-    'Int ºÍ Fix ¶¼»áÉ¾³ı number µÄĞ¡Êı²¿·İ¶ø·µ»ØÊ£ÏÂµÄÕûÊı¡£
-    'Int ºÍ Fix µÄ²»Í¬Ö®´¦ÔÚÓÚ£¬Èç¹û number Îª¸ºÊı£¬Ôò Int ·µ»ØĞ¡ÓÚ»òµÈÓÚ number µÄµÚÒ»¸ö¸ºÕûÊı£¬
-    '¶ø Fix Ôò»á·µ»Ø´óÓÚ»òµÈÓÚ number µÄµÚÒ»¸ö¸ºÕûÊı¡£ÀıÈç£¬Int ½« -8.4 ×ª»»³É -9£¬¶ø Fix ½« -8.4 ×ª»»³É -8¡£
+    'Int å’Œ Fix éƒ½ä¼šåˆ é™¤ number çš„å°æ•°éƒ¨ä»½è€Œè¿”å›å‰©ä¸‹çš„æ•´æ•°ã€‚
+    'Int å’Œ Fix çš„ä¸åŒä¹‹å¤„åœ¨äºï¼Œå¦‚æœ number ä¸ºè´Ÿæ•°ï¼Œåˆ™ Int è¿”å›å°äºæˆ–ç­‰äº number çš„ç¬¬ä¸€ä¸ªè´Ÿæ•´æ•°ï¼Œ
+    'è€Œ Fix åˆ™ä¼šè¿”å›å¤§äºæˆ–ç­‰äº number çš„ç¬¬ä¸€ä¸ªè´Ÿæ•´æ•°ã€‚ä¾‹å¦‚ï¼ŒInt å°† -8.4 è½¬æ¢æˆ -9ï¼Œè€Œ Fix å°† -8.4 è½¬æ¢æˆ -8ã€‚
     Case "sgn":
         fst_n = Sgn(fst_n)
     '>0 1;=0 0;<0 -1
@@ -140,7 +136,7 @@ If Not IsArray(ary(0)) Then
         fst_n = IIf(1 * fst_n <= 1 * rec(ary(2)), 1, 0)
     Case "!":
         fst_n = IIf(fst_n <> rec(ary(2)), 1, 0)
-    'Ìõ¼şÅĞ¶Ï
+    'æ¡ä»¶åˆ¤æ–­
     Case "out":
         oput = ""
         For x = 1 To UBound(ary)
@@ -148,30 +144,30 @@ If Not IsArray(ary(0)) Then
         Next
         MsgBox oput, , "ToyLisp"
         Exit Function
-    'Êä³ö£¨²»ÏŞ²ÎÊı£©
+    'è¾“å‡ºï¼ˆä¸é™å‚æ•°ï¼‰
     Case "in":
         fst_n = InputBox(rec(ary(1)), "ToyLisp")
-    'ÊäÈë
+    'è¾“å…¥
     Case "asc":
         fst_n = Asc(rec(ary(1)))
     Case "chr":
         fst_n = Chr(rec(ary(1)))
-    'ascÂëÓë×Ö·ûµÄÏà»¥×ª»¯
+    'ascç ä¸å­—ç¬¦çš„ç›¸äº’è½¬åŒ–
     Case "len":
         fst_n = Len(fst_n)
-    '×Ö·û´®³¤¶È
+    'å­—ç¬¦ä¸²é•¿åº¦
     Case "size":
         rec = UBound(rec(ary(1)))
         Exit Function
-    'Êı×é³¤¶È
+    'æ•°ç»„é•¿åº¦
     Case "split":
         rec = Split(fst_n, rec(ary(2)))
         Exit Function
-    '×Ö·û´®·Ö¸î
+    'å­—ç¬¦ä¸²åˆ†å‰²
     Case "substr":
         rec = Mid(fst_n, rec(ary(2)), rec(ary(3)))
         Exit Function
-    '(substr "string" 1 1)´Ó"string"×Ö·û´®µÚÒ»¸öÎ»ÖÃ½ØÈ¡Ò»¸ö³¤¶ÈÎªÒ»µÄ×Ö·û´®
+    '(substr "string" 1 1)ä»"string"å­—ç¬¦ä¸²ç¬¬ä¸€ä¸ªä½ç½®æˆªå–ä¸€ä¸ªé•¿åº¦ä¸ºä¸€çš„å­—ç¬¦ä¸²
     Case "def":
         If UBound(vars) = 0 Then
             vars(0) = Array(ary(1), rec(ary(2)), curlv)
@@ -187,7 +183,7 @@ If Not IsArray(ary(0)) Then
         vars(UBound(vars)) = Array(ary(1), rec(ary(2)), curlv)
         ReDim Preserve vars(UBound(vars) + 1)
         Exit Function
-    '¶¨ÒåÒ»¸ö±äÁ¿
+    'å®šä¹‰ä¸€ä¸ªå˜é‡
     Case "list":
         Dim llst()
         ReDim llst(0)
@@ -198,7 +194,7 @@ If Not IsArray(ary(0)) Then
         Next
         rec = llst
         Exit Function
-    '·µ»ØÒ»¸öÁĞ±í£¨Êı×é£©
+    'è¿”å›ä¸€ä¸ªåˆ—è¡¨ï¼ˆæ•°ç»„ï¼‰
     '(def x (list 1 2 3 (list 4 5)))
     Case "m":
         If IsArray(rec(ary(1))) Then
@@ -218,9 +214,9 @@ If Not IsArray(ary(0)) Then
                 Exit Function
             End If
         Next
-    '·µ»ØÊı×éÄÚÈİ
+    'è¿”å›æ•°ç»„å†…å®¹
     '(def x (list 1 2 3 (list 4 5)))
-    '(out (m x 3 0)),µÚÈı¸ö²ÎÊı¼°ÒÔºó±íÏÂ±ê
+    '(out (m x 3 0)),ç¬¬ä¸‰ä¸ªå‚æ•°åŠä»¥åè¡¨ä¸‹æ ‡
     Case "array":
         If IsArray(ary(1)) Then
             r = rec(ary(3))
@@ -234,9 +230,9 @@ If Not IsArray(ary(0)) Then
                 Exit Function
             End If
         Next
-    '²Ù×÷Êı×é
+    'æ“ä½œæ•°ç»„
     '(def x (list 1 2 3 (list 4 5)))
-    '(array x (3 0) "H")£¬ÖĞ¼äÀ¨ºÅÀïµÄ±íÏÂ±ê
+    '(array x (3 0) "H")ï¼Œä¸­é—´æ‹¬å·é‡Œçš„è¡¨ä¸‹æ ‡
     Case "read":
         nHandle = FreeFile
         readt = ""
@@ -252,13 +248,13 @@ If Not IsArray(ary(0)) Then
         Open fst_n For Output As #nHandle
         Print #nHandle, rec(ary(2))
         Close #nHandle
-    'ÎÄ¼şÊı¾İ¶ÁĞ´
+    'æ–‡ä»¶æ•°æ®è¯»å†™
     Case "alloc":
         Dim memspace()
         ReDim memspace(fst_n)
         rec = memspace
         Exit Function
-    '·µ»ØÒ»¸öÖ¸¶¨´óĞ¡µÄÊı×é£¨ÔªËØ¶¼Îª¿Õ£©
+    'è¿”å›ä¸€ä¸ªæŒ‡å®šå¤§å°çš„æ•°ç»„ï¼ˆå…ƒç´ éƒ½ä¸ºç©ºï¼‰
     '(def x (alloc 100))
     Case "do":
         For x = 1 To UBound(ary)
@@ -266,7 +262,7 @@ If Not IsArray(ary(0)) Then
             Call rec(todo)
         Next
         Exit Function
-    'Õâ¸ö¿ÉÒª¿É²»Òª
+    'è¿™ä¸ªå¯è¦å¯ä¸è¦
     Case "if":
     If rec(ary(1)) = 1 Then
         Call rec(ary(2))
@@ -278,10 +274,10 @@ If Not IsArray(ary(0)) Then
             Exit Function
         End If
     End If
-    'if([±í´ïÊ½][²Ù×÷1][²Ù×÷2£¨¿ÉÑ¡£©])
-    '×¢Òâ²Ù×÷±í´ïÊ½¶àÓàÒ»¸öÊ±ÒªÓÃdo»òÀ¨ºÅÀ¨ÆğÀ´
-    'whileÒ²Ò»Ñù
-    'Èç(if(= 1 1)((out 1)(out"y"))(out 0))
+    'if([è¡¨è¾¾å¼][æ“ä½œ1][æ“ä½œ2ï¼ˆå¯é€‰ï¼‰])
+    'æ³¨æ„æ“ä½œè¡¨è¾¾å¼å¤šä½™ä¸€ä¸ªæ—¶è¦ç”¨doæˆ–æ‹¬å·æ‹¬èµ·æ¥
+    'whileä¹Ÿä¸€æ ·
+    'å¦‚(if(= 1 1)((out 1)(out"y"))(out 0))
     Case "while":
         Do While rec(ary(1)) = 1 And ifabort = False And ewhile = False
             rec (ary(2))
@@ -290,18 +286,18 @@ If Not IsArray(ary(0)) Then
         Exit Function
     '(while (= 1 1)((out 1)(out 2)))
     Case "break":
-        'Ìø³öÑ­»·
+        'è·³å‡ºå¾ªç¯
         ewhile = True
         Exit Function
     Case "return":
-        '·µ»Ø×Ô¶¨Òåº¯ÊıÖµ
+        'è¿”å›è‡ªå®šä¹‰å‡½æ•°å€¼
         rt = rec(ary(1))
         ifabort = True
         Exit Function
-    Case "#": '×¢ÊÍ£¨£¡£¡£¡×¢Òâ£¡×¢ÊÍÒ²±»ÊÓÎªº¯Êı£¬Òª¼ÇµÃ¿Õ¸ñ£¬ÇÒ¶ÔÓÚifºÍwhileÓï¾äÄãÒªĞ¡ĞÄ£¡£¡£¡£©
+    Case "#": 'æ³¨é‡Šï¼ˆï¼ï¼ï¼æ³¨æ„ï¼æ³¨é‡Šä¹Ÿè¢«è§†ä¸ºå‡½æ•°ï¼Œè¦è®°å¾—ç©ºæ ¼ï¼Œä¸”å¯¹äºifå’Œwhileè¯­å¥ä½ è¦å°å¿ƒï¼ï¼ï¼ï¼‰
         Exit Function
-    Case Else: '×Ô¶¨Òåº¯Êı
-        If UBound(funcs) = 0 And IsEmpty(funcs(0)) Then cerr "¾¯¸æ£ºº¯ÊıÎ´¶¨Òå" & vbCrLf & "ÃèÊö£º" & operate_name: Exit Function
+    Case Else: 'è‡ªå®šä¹‰å‡½æ•°
+        If UBound(funcs) = 0 And IsEmpty(funcs(0)) Then cerr "è­¦å‘Šï¼šå‡½æ•°æœªå®šä¹‰" & vbCrLf & "æè¿°ï¼š" & operate_name: Exit Function
         For Each fn In funcs
             If LCase(fn(1)) = operate_name Then
                 bound = UBound(vars)
@@ -318,18 +314,18 @@ If Not IsArray(ary(0)) Then
                         vars(UBound(vars)) = Array(fn(2)(i), newsp(i - 1), curlv)
                         ReDim Preserve vars(UBound(vars) + 1)
                     Next
-                End If '×Ô¶¨Òåº¯Êı´«²Î£¬curlvÊÇµ±Ç°×÷ÓÃÓòµÈ¼¶£¬·ÀÖ¹²ÎÊı·ÃÎÊÔ½½ç
-                '£¡£¡£¡×¢Òâ£º¶ÔÓÚÎŞ²ÎÊıµÄº¯ÊıÓ¦ÔÚº¯ÊıÃûºóÃæËæÒâĞ´Ò»¸ö²ÎÊı£¨"()"Ò²ĞĞ£¬±ÈÈç"(break())"£©,·ñÔò»á±»½âÊÍÆ÷ÈÏÎªÊÇ±äÁ¿
+                End If 'è‡ªå®šä¹‰å‡½æ•°ä¼ å‚ï¼Œcurlvæ˜¯å½“å‰ä½œç”¨åŸŸç­‰çº§ï¼Œé˜²æ­¢å‚æ•°è®¿é—®è¶Šç•Œ
+                'ï¼ï¼ï¼æ³¨æ„ï¼šå¯¹äºæ— å‚æ•°çš„å‡½æ•°åº”åœ¨å‡½æ•°ååé¢éšæ„å†™ä¸€ä¸ªå‚æ•°ï¼ˆ"()"ä¹Ÿè¡Œï¼Œæ¯”å¦‚"(break())"ï¼‰,å¦åˆ™ä¼šè¢«è§£é‡Šå™¨è®¤ä¸ºæ˜¯å˜é‡
                 For exec = 3 To UBound(fn)
                     this = rec(fn(exec))
                     If ifabort = True Then ifabort = False: rec = rt: rt = "": Exit For
                 Next
-                ReDim Preserve vars(bound) '½«º¯Êı³ÌĞò²úÉúµÄ±äÁ¿Ïú»Ù
+                ReDim Preserve vars(bound) 'å°†å‡½æ•°ç¨‹åºäº§ç”Ÿçš„å˜é‡é”€æ¯
                 curlv = curlv - 1
                 Exit Function
             End If
          Next
-         cerr "¾¯¸æ£ºº¯ÊıÎ´¶¨Òå" & vbCrLf & "ÃèÊö£º" & operate_name
+         cerr "è­¦å‘Šï¼šå‡½æ•°æœªå®šä¹‰" & vbCrLf & "æè¿°ï¼š" & operate_name
     End Select
     End If
     If IsArray(ary(0)) Then
@@ -338,7 +334,7 @@ If Not IsArray(ary(0)) Then
             Call rec(todo)
         Next
         Exit Function
-    End If 'À¨ºÅÀ¨ÆğÀ´µÄÒ»ÏµÁĞ±í´ïÊ½µÄÖ´ĞĞ
+    End If 'æ‹¬å·æ‹¬èµ·æ¥çš„ä¸€ç³»åˆ—è¡¨è¾¾å¼çš„æ‰§è¡Œ
     rec = fst_n
 Else
     rec = rec(ary(0))
@@ -357,22 +353,22 @@ Else
                 Exit Function
             End If
         Next
-        cerr "¾¯¸æ£º±äÁ¿Î´¶¨Òå" & vbCrLf & "ÃèÊö£º" & ary
+        cerr "è­¦å‘Šï¼šå˜é‡æœªå®šä¹‰" & vbCrLf & "æè¿°ï¼š" & ary
     Else
         rec = Replace(ary, Chr(34), "")
         Exit Function
     End If
-End If '±äÁ¿¡¢×Ö·û´®¡¢ÊıÖµµÄ·µ»Ø
+End If 'å˜é‡ã€å­—ç¬¦ä¸²ã€æ•°å€¼çš„è¿”å›
 End Function
 Sub parse()
-'½«Ô´´úÂë½âÎö³ÉÁĞ±í
+'å°†æºä»£ç è§£ææˆåˆ—è¡¨
     src = sourcecode
     tm = Len(src)
     If tm = 0 Then Exit Sub
     Do While Mid(src, tm, 1) = Chr(13) Or Mid(src, tm, 1) = Chr(10) Or Mid(src, tm, 1) = " " Or Mid(src, tm, 1) = " "
         tm = tm - 1
     Loop
-    'ÕâËÆºõÊÇÒ»¸öbug£¬±ØĞë°ÑÔ´´úÂë½áÎ²µÄcrlfÓë¿Õ¸ñÈ¥µô£¬·ñÔò½âÎö»á³öÎÊÌâ
+    'è¿™ä¼¼ä¹æ˜¯ä¸€ä¸ªbugï¼Œå¿…é¡»æŠŠæºä»£ç ç»“å°¾çš„crlfä¸ç©ºæ ¼å»æ‰ï¼Œå¦åˆ™è§£æä¼šå‡ºé—®é¢˜
     codelen = tm
     r = recursion()
     If Not IsArray(r(0)) Then Exit Sub
@@ -395,7 +391,7 @@ Sub parse()
             curlv = c
         End If
     End If
-    Next '¹«ÓĞ±äÁ¿
+    Next 'å…¬æœ‰å˜é‡
     If UBound(funcs) > 0 Then ReDim Preserve funcs(UBound(funcs) - 1)
     For Each blocks In r
     If UBound(blocks) > 0 Then
@@ -406,10 +402,10 @@ Sub parse()
             Exit Sub
         End If
     End If
-    Next 'Ö÷º¯Êı
+    Next 'ä¸»å‡½æ•°
 End Sub
-'Õâ±ãÊÇ½âÎöº¯ÊıÁË
-'½«Ô´´úÂë½âÎö³ÉÁĞ±í£¨ÆäÊµ¾ÍÊÇÊı×é£©
+'è¿™ä¾¿æ˜¯è§£æå‡½æ•°äº†
+'å°†æºä»£ç è§£ææˆåˆ—è¡¨ï¼ˆå…¶å®å°±æ˜¯æ•°ç»„ï¼‰
 Function recursion()
     tmp = crlf
     Dim par()
@@ -425,13 +421,13 @@ Function recursion()
             block = block + 1
             par(UBound(par)) = recursion()
             If Not IsArray(par(UBound(par))(0)) Then
-                If (par(UBound(par))(0) = "fn" Or par(UBound(par))(0) = "main") And block > 0 Then cerr "´íÎó£ºÔÚÓï¾ä¿éÖĞ¶¨Òåº¯Êı" & vbCrLf & "Î»ÓÚĞĞ£º" & tmp
+                If (par(UBound(par))(0) = "fn" Or par(UBound(par))(0) = "main") And block > 0 Then cerr "é”™è¯¯ï¼šåœ¨è¯­å¥å—ä¸­å®šä¹‰å‡½æ•°" & vbCrLf & "ä½äºè¡Œï¼š" & tmp
             End If
             ReDim Preserve par(UBound(par) + 1)
         ElseIf Mid(src, idx, 1) = ")" Then
             idx = idx + 1
             block = block - 1
-            If block < 0 Then cerr "´íÎó£ºÓï¾ä¿éÄÚ×óÀ¨ºÅÈ±Ê§" & vbCrLf & "Î»ÓÚĞĞ£º" & tmp
+            If block < 0 Then cerr "é”™è¯¯ï¼šè¯­å¥å—å†…å·¦æ‹¬å·ç¼ºå¤±" & vbCrLf & "ä½äºè¡Œï¼š" & tmp
             If UBound(par) > 0 Then ReDim Preserve par(UBound(par) - 1)
             recursion = par
             Exit Function
@@ -454,11 +450,11 @@ Function recursion()
             ReDim Preserve par(UBound(par) + 1)
         End If
     Loop
-    If block > 0 Then cerr "´íÎó£º³ÌĞòÎŞ½áÎ²" & vbCrLf & "Î»ÓÚĞĞ£º" & crlf
+    If block > 0 Then cerr "é”™è¯¯ï¼šç¨‹åºæ— ç»“å°¾" & vbCrLf & "ä½äºè¡Œï¼š" & crlf
     If UBound(par) > 0 Then ReDim Preserve par(UBound(par) - 1)
     recursion = par
 End Function
-Sub Main() 'ÎÒÊÇ½«¹¤³ÌµÄÆô¶¯ÉèÖÃÎªSub Main()
+Sub Main() 'æˆ‘æ˜¯å°†å·¥ç¨‹çš„å¯åŠ¨è®¾ç½®ä¸ºSub Main()
     f_path = Replace(Command, Chr(34), "")
     nHandle = FreeFile
     Open f_path For Input As #nHandle
@@ -479,7 +475,7 @@ Sub Main() 'ÎÒÊÇ½«¹¤³ÌµÄÆô¶¯ÉèÖÃÎªSub Main()
     ReDim funcs(0)
     Call parse
 End Sub
-'¿´µ½Õâ¶ùÀ²£¿
-'ÓÃĞÄ¿´ÍêÀ²£¿
-'OK!¹§Ï²ÄãÑ§»áÁËÈçºÎĞ´Ò»¸ö¼òµ¥µÄ½âÊÍÆ÷£¡
-'Çë³¢ÊÔ×Ô¼º¶¯ÊÖĞ´Ò»¸ö°É£¡
+'çœ‹åˆ°è¿™å„¿å•¦ï¼Ÿ
+'ç”¨å¿ƒçœ‹å®Œå•¦ï¼Ÿ
+'OK!æ­å–œä½ å­¦ä¼šäº†å¦‚ä½•å†™ä¸€ä¸ªç®€å•çš„è§£é‡Šå™¨ï¼
+'è¯·å°è¯•è‡ªå·±åŠ¨æ‰‹å†™ä¸€ä¸ªå§ï¼
